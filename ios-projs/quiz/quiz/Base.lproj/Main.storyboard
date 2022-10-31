@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,6 +46,12 @@
                                     <action selector="showNextQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RLh-Um-wiR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pY8-mk-YrA">
+                                <rect key="frame" x="175" y="111" width="25" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -53,21 +59,26 @@
                             <constraint firstItem="Yo6-n7-nhQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1wv-DV-sgC"/>
                             <constraint firstItem="NJc-Gj-4NZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A3e-jZ-0Nd"/>
                             <constraint firstItem="HeN-BH-6bx" firstAttribute="top" secondItem="HCi-C0-Po9" secondAttribute="bottom" constant="148" id="FLd-RN-rGB"/>
+                            <constraint firstItem="pY8-mk-YrA" firstAttribute="top" secondItem="Yo6-n7-nhQ" secondAttribute="top" id="Ke5-jq-HOO"/>
                             <constraint firstItem="HeN-BH-6bx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="S0S-05-WKl"/>
                             <constraint firstItem="HCi-C0-Po9" firstAttribute="top" secondItem="Yo6-n7-nhQ" secondAttribute="bottom" constant="13" id="VhY-Rh-nKq"/>
-                            <constraint firstItem="HCi-C0-Po9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xkj-Ae-fJ9"/>
                             <constraint firstItem="NJc-Gj-4NZ" firstAttribute="top" secondItem="HeN-BH-6bx" secondAttribute="bottom" constant="8" symbolic="YES" id="cW4-Fd-MLW"/>
+                            <constraint firstItem="pY8-mk-YrA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ema-7p-k1M"/>
                             <constraint firstItem="HeN-BH-6bx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gCE-Fy-hxd"/>
+                            <constraint firstItem="HCi-C0-Po9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ua5-Fd-hVf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="answerLabel" destination="HeN-BH-6bx" id="4Ib-Cy-Hzx"/>
-                        <outlet property="questionLabel" destination="Yo6-n7-nhQ" id="ZjA-rh-iFQ"/>
+                        <outlet property="currentQuestionLabel" destination="Yo6-n7-nhQ" id="v9U-du-XRg"/>
+                        <outlet property="currentQuestionLabelCenterXConstraint" destination="1wv-DV-sgC" id="EAM-IU-t72"/>
+                        <outlet property="nextQuestionLabel" destination="pY8-mk-YrA" id="jeH-Vd-NfQ"/>
+                        <outlet property="nextQuestionLabelCenterXConstraint" destination="ema-7p-k1M" id="ZS6-0A-Vm2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="94"/>
+            <point key="canvasLocation" x="20" y="93.103448275862078"/>
         </scene>
     </scenes>
     <resources>
